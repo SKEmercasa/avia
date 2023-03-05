@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('OpenSans'), url('./assets/font/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+.app {
+  margin: 0 auto;
+  width: 900px;
+  height: auto;
+  background-color: #f3f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 160px;
+  background-color: inherit;
+}
+
+.wrapper {
+  background-color: #f3f7fa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  height: auto;
+  text-align: center;
+  width: 500px;
+  background: inherit;
+
+  ul {
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    height: 50px;
+
+    li {
+      width: 33.3%;
+      list-style: none;
+      background-color: inherit;
+      border: 1px solid #dfe5ec;
+
+      button {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background-color: inherit;
+        padding: 0;
+        border-radius: 5px;
+        font-family: 'Open Sans';
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-size: 12px;
+        line-height: 20px;
+        color: #4a4a4a;
+        text-transform: uppercase;
+      }
+    }
+
+    li:first-child {
+      border-radius: 5px 0 0 5px;
+      background: #2196f3;
+
+      button {
+        color: #ffffff;
+      }
+    }
+
+    li:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  article {
+    height: 180px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: 20px;
+
+    header {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      span {
+        font-family: 'Open Sans';
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #2196f3;
+      }
+    }
+
+    section {
+      height: 110px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+
+        span {
+          margin: 5px;
+        }
+
+        span:nth-child(odd) {
+          font-family: 'Open Sans';
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0.5px;
+          color: #a0b0b9;
+          text-transform: uppercase;
+        }
+
+        span :nth-child(even) {
+          font-family: 'Open Sans';
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0px;
+          color: #4a4a4a;
+        }
+      }
+    }
+  }
+}
+
+.buttonAdd {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #2196f3;
+  background: #2196f3;
+  color: #ffffff;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.buttonAdd:active {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #2196f3;
+  background: #e9ecef;
+  color: #4a4a4a;
+  font-family: 'Open Sans';
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sider {
+  width: 230px;
+  height: 250px;
+  margin: 0 20px 0 0;
+  padding-left: 0;
+  position: sticky;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  legend {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    color: #4a4a4a;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
+  fieldset {
+    border: 0;
+
+    div {
+      margin-top: 15px;
+
+      input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      input + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+      }
+
+      input + label::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #9abbce;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+
+      input:checked + label::before {
+        border-color: #2196f3;
+        background-color: inherit;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.28571 8L0 4.16123L1.20857 3.0787L4.28571 5.82726L10.7914 0L12 1.09021L4.28571 8Z' fill='%232196F3'/%3E%3C/svg%3E%0A");
+      }
+      /* стили при наведении курсора на checkbox */
+      input:not(:disabled):not(:checked) + label:hover::before {
+        border-color: #b3d7ff;
+      }
+      /* стили для активного состояния чекбокса (при нажатии на него) */
+      input:not(:disabled):active + label::before {
+        background-color: #b3d7ff;
+        border-color: #b3d7ff;
+      }
+      /* стили для чекбокса, находящегося в фокусе */
+      input:focus + label::before {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+      input:focus:not(:checked) + label::before {
+        border-color: #80bdff;
+      }
+      /* стили для чекбокса, находящегося в состоянии disabled */
+      input:disabled + label::before {
+        background-color: #e9ecef;
+      }
+    }
+
+    label {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #4a4a4a;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  color: #fff;
+  background-color: #7dbcea;
+  height: 50px;
+}
