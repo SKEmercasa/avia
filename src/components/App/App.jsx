@@ -1,8 +1,9 @@
-import React from 'react';
+import style from '../App/App.module.scss';
+import logo from '../../assets/images/avia.svg';
+import logoCard from '../../assets/images/logoCard.svg';
 
-import style from './App.module.scss';
-import logo from './assets/arts/avia.svg';
-import logoCard from './assets/arts/logoCard.svg';
+import MenuContainer from './Menu/MenuContainer';
+import FilterCard from './FilterCard/FilterCard';
 
 const App = () => {
   return (
@@ -11,43 +12,9 @@ const App = () => {
         <img src={logo} alt="logo" srcSet={logo}></img>
       </header>
       <div className={style.wrapper}>
-        <menu className={style.sider}>
-          <fieldset>
-            <legend>Количество пересадок</legend>
-            <div>
-              <input type="checkbox" id="allCheck" name="scales" />
-              <label htmlFor="allCheck">Все</label>
-            </div>
-            <div>
-              <input type="checkbox" id="zeroCheck" name="scales" />
-              <label htmlFor="zeroCheck">Без пересадок</label>
-            </div>
-            <div>
-              <input type="checkbox" id="oneCheck" name="scales" />
-              <label htmlFor="oneCheck">1 пересадка</label>
-            </div>
-            <div>
-              <input type="checkbox" id="twoCheck" name="scales" />
-              <label htmlFor="twoCheck">2 пересадки</label>
-            </div>
-            <div>
-              <input type="checkbox" id="threeCheck" name="scales" />
-              <label htmlFor="threeCheck">3 пересадки</label>
-            </div>
-          </fieldset>
-        </menu>
+        <MenuContainer />
         <main className={style.content}>
-          <ul>
-            <li>
-              <button type="button">Самый дешевый</button>
-            </li>
-            <li>
-              <button type="button">Самый быстрый</button>
-            </li>
-            <li>
-              <button type="button">Оптимальный</button>
-            </li>
-          </ul>
+          <FilterCard />
           <article className="card">
             <header>
               <span>13 400 P</span>
