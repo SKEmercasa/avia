@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { getFlag, getAllFlag, getEffectFlag } from '../../redux/reducer-click-filter';
+import { getFlag, getAllFlag, getEffectFlag } from '../../redux/reducerMenuFilter';
 
 import Menu from './Menu';
 
@@ -8,13 +8,13 @@ const MenuContainer = (props) => {
   return <Menu {...props} />;
 };
 
-const mapStateToProps = ({ allCheck, zeroCheck, oneCheck, twoCheck, threeCheck }) => {
+const mapStateToProps = ({ menu }) => {
   return {
-    allCheck,
-    zeroCheck,
-    oneCheck,
-    twoCheck,
-    threeCheck,
+    allCheck: menu.allCheck,
+    zeroCheck: menu.zeroCheck,
+    oneCheck: menu.oneCheck,
+    twoCheck: menu.twoCheck,
+    threeCheck: menu.threeCheck,
   };
 };
 

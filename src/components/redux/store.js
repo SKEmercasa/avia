@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import reducerClickFilter from './reducer-click-filter';
+import reducerMenuFilter from './reducerMenuFilter';
+import reducerNavSlice from './reducerNavSlice';
+import reducerGetData from './reducerGetData';
 
 export const store = configureStore({
-  reducer: reducerClickFilter,
+  reducer: { menu: reducerMenuFilter, nav: reducerNavSlice, getData: reducerGetData },
 });
 
 window.store = store;

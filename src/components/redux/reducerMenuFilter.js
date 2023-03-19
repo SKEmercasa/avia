@@ -3,11 +3,11 @@ const GETALLFLAG = 'getallflag';
 const GETEFFECTFLAG = 'geteffectflag';
 
 const initialState = {
-  allCheck: false,
-  zeroCheck: false,
-  oneCheck: false,
-  twoCheck: false,
-  threeCheck: false,
+  allCheck: true,
+  zeroCheck: true,
+  oneCheck: true,
+  twoCheck: true,
+  threeCheck: true,
 };
 
 const reducerClickFilter = (state = initialState, action) => {
