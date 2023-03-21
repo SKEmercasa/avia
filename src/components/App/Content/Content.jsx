@@ -15,13 +15,13 @@ const Content = () => {
   const [card, setCard] = useState([]);
 
   const render = (card) => {
-    return card.map((el, i) => {
+    return card.slice(0, count).map((el, i) => {
       return <CreateCard key={i} state={el} />;
     });
   };
 
   useEffect(() => {
-    setCard(filterCard(tickets.data.slice(0, count), menu, nav.buttonFlag));
+    setCard(filterCard(tickets.data, menu, nav.buttonFlag));
   }, [tickets.data, menu, count, nav]);
 
   return (

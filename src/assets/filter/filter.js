@@ -12,15 +12,16 @@ function byField(field) {
 
 function reFilter(card, flag) {
   let point = Object.values(flag);
+  let temp = [...card];
   switch (true) {
     case point[0]:
-      return card.sort(byField('price'));
+      return temp.sort(byField('price'));
     case point[1]:
-      return card.sort((a, b) => (a.segments[0].duration > b.segments[0].duration ? 1 : -1));
+      return temp.sort((a, b) => (a.segments[0].duration > b.segments[0].duration ? 1 : -1));
     case point[2]:
-      return card.sort(byField('price')).sort((a, b) => (a.segments[0].duration > b.segments[0].duration ? 1 : -1));
+      return temp.sort(byField('price')).sort((a, b) => (a.segments[0].duration > b.segments[0].duration ? 1 : -1));
     default:
-      return card;
+      return temp;
   }
 }
 
